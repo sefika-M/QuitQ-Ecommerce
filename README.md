@@ -1,1 +1,0 @@
-# QuitQ E-commerce Project
