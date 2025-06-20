@@ -1,0 +1,120 @@
+
+ECOMMERCE
+_________________________________________________________
+
+—USER:
+
+1.register:  POST  http://localhost:9090/user/register
+
+{
+  "name": "Sanjana",
+  "email": "sanjana@example.com",
+  "password": "sanjana123",
+  "gender": "Female",
+  "contactNumber": "8866452319",
+  "address": "Chennai",
+  "role": "CUSTOMER"
+}
+
+
+2.login:
+
+POST  http://localhost:9090/user/login?email=steven@gmail.com&password=john098
+
+
+3.getUserById:
+
+GET  http://localhost:9090/getUserById/6
+
+
+4.getUserByName:
+
+GET  http://localhost:9090/getUserByName/meena
+
+
+5.getAllUsers:
+
+GET  http://localhost:9090/getAllUsers
+
+_________________________________________________________
+
+
+—PRODUCT:
+
+1.addProduct:
+
+POST  http://localhost:9090/products/addProduct
+
+{
+  "productName": "Sweater",
+  "description": "Women's Red Sweater",
+  "price": 2000.00,
+  "imageUrl": "https://example.com/sweater.jpg",
+  "stock": 50,
+  "category": {
+    "catId": 2
+  },
+  "seller": {
+    "userId": 4
+  }
+}
+
+
+2.getAllProducts:
+
+GET  http://localhost:9090/products/getAllProducts
+
+
+3.getProductsByName:
+
+GET  http://localhost:9090/products/getProductsByName/sweat   [ for partial search example ]
+or
+GET  http://localhost:9090/products/getProductsByName/sweater
+
+
+4.searchByCategoryName:
+
+GET  http://localhost:9090/products/searchByCategoryName/Fashion   
+
+
+5.getProductById:
+
+GET  http://localhost:9090/products/getProductById/4
+
+
+6.deleteProduct:
+
+DELETE  http://localhost:9090/products/deleteProduct/6
+
+_________________________________________________________
+
+
+—WALLET:  1. addWallet:
+
+POST  http://localhost:9090/wallets/addWallet
+
+{
+  "user": {
+    "userId": 6
+  },
+  "walBalance": 450.00,
+  "walSource": "NETBANKING"
+}
+
+
+2.getWalletsByUserId:
+
+GET  http://localhost:9090/wallets/getWalletsByUserId/6
+
+
+3.getWalletBywalletId:
+
+GET  http://localhost:9090/wallets/getWalletBywalletId/5
+
+
+4.getAllWallets:
+
+GET  http://localhost:9090/wallets/getAllWallets
+
+
+
